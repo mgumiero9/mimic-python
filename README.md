@@ -28,7 +28,7 @@ Given a word, print all permutations of all its letters. For example, for the wo
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
 ```bash
-git clone https://github.com/mgumiero9/mimic-js.git
+https://github.com/mgumiero9/mimic-python.git
 ```
 
 ## Usage
