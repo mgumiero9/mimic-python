@@ -24,7 +24,7 @@ def combos(word):
         global my_str
         global arr
         arr = []
-        if step < len(word):
+        if step <= len(word):
             if step == 1:
                 for c in my_str:
                     add_row(c)
@@ -56,7 +56,6 @@ def combos(word):
                 step += 1
             iterator()
 
-
     def print_values():
         for key in obj:
             if isinstance(obj[key], list):
@@ -69,3 +68,4 @@ def combos(word):
 
 
 combos("abc")
+# combos("abcde")
