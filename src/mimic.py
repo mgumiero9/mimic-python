@@ -28,17 +28,18 @@ def combos(word):
             if step == 1:
                 for c in my_str:
                     add_row(c)
-
                 step += 1
             elif step == 2:
                 stepCounter += 1
                 my_str = list(word)
                 if fixedPos < len(my_str):
-                    fixedChars = my_str[fixedPos:step -1]
+                    fixedChars = my_str[fixedPos:fixedPos + 1]
+                    for c in list(word):
+                        if c in fixedChars:
+                            my_str.remove(c)
                 for c in my_str:
                     arr = []
-                    arr.append(fixedChars)
-                    arr.append(c)
+                    arr.append(''.join(fixedChars + list(c)))
                     add_row(arr)
                 fixedPos += 1
                 if stepCounter >= len(word):
@@ -62,7 +63,7 @@ def combos(word):
     def print_values():
         for key in obj:
             if isinstance(obj[key], list):
-                print(''.join(obj[key]))
+                print(','.join(obj[key]))
             else:
                 print(obj[key])
 
