@@ -14,7 +14,7 @@ def combos(word):
 
     def add_row(character):
         global objOrdinary
-        obj['objOrdinary'] = character
+        obj[objOrdinary] = character
         objOrdinary += 1
 
     def iterator():
@@ -22,6 +22,7 @@ def combos(word):
         global stepCounter
         global fixedPos
         global my_str
+        global arr
         arr = []
         if step < len(word):
             if step == 1:
@@ -57,6 +58,16 @@ def combos(word):
                 step += 1
             iterator()
     iterator()
+
+    def print_values():
+        for key in obj:
+            if isinstance(obj[key], list):
+                print(''.join(obj[key]))
+            else:
+                print(obj[key])
+
+    print_values()
+
 
 
 combos("abc")
