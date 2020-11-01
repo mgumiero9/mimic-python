@@ -33,8 +33,8 @@ https://github.com/mgumiero9/mimic-python.git
 
 ## Usage
 
-```js
-node app.js
+```bash
+python src/mimic.py
 ```
 
 ## Contributing
