@@ -38,7 +38,6 @@ def combos(word):
                         if c in fixedChars:
                             my_str.remove(c)
                 for c in my_str:
-
                     arr = fixedChars + list(c)
                     add_row(arr)
                 fixedPos += 1
@@ -52,13 +51,11 @@ def combos(word):
                         for c in obj[key]:
                             my_str = list(filter(lambda x: x != c, my_str))
                         for strChar in list(my_str):
-                            arr = []
-                            arr.append(list(obj[key]))
-                            arr.append(strChar)
+                            arr = list(obj[key]) + list(strChar)
                             add_row(arr)
                 step += 1
             iterator()
-    iterator()
+
 
     def print_values():
         for key in obj:
@@ -67,8 +64,8 @@ def combos(word):
             else:
                 print(obj[key])
 
+    iterator()
     print_values()
-
 
 
 combos("abc")
